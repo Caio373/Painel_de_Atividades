@@ -1,11 +1,247 @@
-/* Os estilos da interface deverão ser desenvolvidos durante a prova. */
+:root {
+  --cor-primaria: #3157a4;
+  --cor-primaria-escura: #233f7a;
+  --cor-destaque: #e7efff;
+  --cor-fundo: #f5f7fb;
+  --cor-texto: #202b3c;
+  --cor-texto-suave: #637083;
+  --sombra-suave: 0 0.75rem 2rem rgba(31, 48, 77, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 main {
   flex: 1;
+}
+
+.navbar {
+  background-color: #19263d !important;
+  box-shadow: 0 0.25rem 1rem rgba(17, 29, 49, 0.16);
+}
+
+.navbar-brand {
+  letter-spacing: 0.01em;
+}
+
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.78);
+  transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #fff;
+}
+
+#inicio {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 85% 20%, rgba(255, 255, 255, 0.18), transparent 34%),
+    linear-gradient(120deg, #233f7a 0%, #3157a4 58%, #4774c3 100%);
+  color: #fff;
+}
+
+#inicio::after {
+  position: absolute;
+  right: -5rem;
+  bottom: -11rem;
+  width: 25rem;
+  height: 25rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2.5rem rgba(255, 255, 255, 0.04), 0 0 0 5rem rgba(255, 255, 255, 0.03);
+  content: "";
+  pointer-events: none;
+}
+
+#inicio .container {
+  position: relative;
+  z-index: 1;
+}
+
+#inicio h1 {
+  max-width: 14ch;
+  margin-bottom: 1rem;
+  letter-spacing: -0.035em;
+}
+
+#inicio .lead {
+  max-width: 42rem;
+  margin-bottom: 1.75rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.btn-primary {
+  border-color: var(--cor-primaria);
+  background-color: var(--cor-primaria);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  border-color: var(--cor-primaria-escura);
+  background-color: var(--cor-primaria-escura);
+}
+
+#inicio .btn-primary {
+  border-color: #fff;
+  background-color: #fff;
+  color: var(--cor-primaria-escura);
+  font-weight: 600;
+}
+
+#inicio .btn-primary:hover,
+#inicio .btn-primary:focus {
+  border-color: #e7efff;
+  background-color: #e7efff;
+}
+
+#feedback:empty {
+  display: none;
+}
+
+#feedback .alert {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 0.85rem;
+  box-shadow: 0 0.25rem 0.9rem rgba(31, 48, 77, 0.05);
+}
+
+#conteudo,
+#cursos,
+#workshop {
+  scroll-margin-top: 1.5rem;
+}
+
+#conteudo h2,
+#cursos h2,
+#workshop h2 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+#conteudo .mb-4 p {
+  margin-bottom: 0;
+  color: var(--cor-texto-suave) !important;
+}
+
+#areaConteudo > * {
+  display: flex;
+}
+
+#areaConteudo .card {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #e6eaf1;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: var(--sombra-suave);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#areaConteudo .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1rem 2.25rem rgba(31, 48, 77, 0.13);
+}
+
+#areaConteudo .card-body {
+  padding: 1.5rem;
+}
+
+#areaConteudo .card-title {
+  color: #1d2b42;
+  font-weight: 700;
+}
+
+#areaConteudo .card-text {
+  color: var(--cor-texto-suave);
+}
+
+#areaConteudo .badge {
+  font-weight: 600;
+}
+
+#cursos,
+#workshop {
+  padding-top: 3rem;
+  border-top: 1px solid #e3e8f0;
+}
+
+#cursos > .card,
+#workshop > .card {
+  border: 1px solid #e6eaf1;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: var(--sombra-suave);
+}
+
+#cursos .form-label,
+#workshop .form-label {
+  color: #344158;
+  font-weight: 600;
+}
+
+#cursos .form-control,
+#workshop .form-control,
+#cursos .form-select,
+#workshop .form-select {
+  min-height: 2.8rem;
+  border-color: #d8deea;
+  border-radius: 0.65rem;
+}
+
+#cursos .form-control:focus,
+#workshop .form-control:focus,
+#cursos .form-select:focus,
+#workshop .form-select:focus {
+  border-color: #7895d1;
+  box-shadow: 0 0 0 0.2rem rgba(49, 87, 164, 0.15);
+}
+
+footer {
+  background-color: #fff;
+  border-color: #e3e8f0 !important;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 575.98px) {
+  #inicio {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+
+  #inicio h1 {
+    font-size: clamp(2.25rem, 11vw, 3rem);
+  }
+
+  #conteudo,
+  #cursos,
+  #workshop {
+    padding-top: 3rem !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
 }
