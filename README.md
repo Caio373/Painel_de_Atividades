@@ -4,6 +4,8 @@ Este projeto contém uma Web API de atividades formativas e uma estrutura inicia
 
 O projeto deverá ser utilizado como base para a prova prática de Desenvolvimento Web e Mobile I.
 
+##Alunos: Caio Fagundes Mendonça Oliveira | Mariana Marques Cavalcante | Antonella Scanoni | Guilherme Tierling | Adelano Ramos
+
 ## Organização
 
 ```text
